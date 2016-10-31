@@ -1,0 +1,10 @@
+{
+    "public": {
+            // 根据需要填写
+            // 如下是使用ga统计包含的 id
+            "analyticsSettings": {
+                        "Google Analytics": {
+                                    }
+                    }
+        }
+}

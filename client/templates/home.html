@@ -1,0 +1,79 @@
+<template name="home">
+{{>loginButtons}}    
+<div class="pure-g main-container">
+
+	
+        <div class="pure-u-1-2 task-list-wrapper task-list-wrapper-tl">
+            <div class="task-list-title">
+                重要&紧急
+            </div>
+		 <form class="pure-form form-create-task">
+                <input class="hidden" type="text" name="type" value="tl"/>
+                <input class="pure-input-1" name="name" type="text"/>
+                <button class="hidden" type="submit"></button>
+            </form>
+       <ol class="task-list">
+                {{#each taskListTL}}
+                    <li class="task-item" data-task-id="{{_id}}">
+                        <div class="task-name" contenteditable="true">{{name}}</div>
+                        <span class="delete-task">&times;</span>
+                    </li>
+                {{/each}}
+            </ol>
+        </div>
+        <div class="pure-u-1-2 task-list-wrapper  task-list-wrapper-tr">
+            <div class="task-list-title">
+                重要&不紧急
+            </div>
+ 	<form class="pure-form form-create-task">
+                <input class="hidden" type="text" name="type" value="tr"/>
+                <input class="pure-input-1" name="name" type="text"/>
+                <button class="hidden" type="submit"></button>
+            </form>
+         <ol class="task-list">
+                {{#each taskListTR}}
+                    <li class="task-item" data-task-id="{{_id}}">
+                        <div class="task-name" contenteditable="true">{{name}}</div>
+                        <span class="delete-task">&times;</span>
+                    </li>
+                {{/each}}
+            </ol>
+        </div>
+        <div class="pure-u-1-2 task-list-wrapper  task-list-wrapper-bl">
+            <div class="task-list-title">
+                不重要&紧急
+            </div>
+ 	<form class="pure-form form-create-task">
+                <input class="hidden" type="text" name="type" value="bl"/>
+                <input class="pure-input-1" name="name" type="text"/>
+                <button class="hidden" type="submit"></button>
+            </form>
+          <ol class="task-list">
+                {{#each taskListBL}}
+                    <li class="task-item" data-task-id="{{_id}}">
+                        <div class="task-name" contenteditable="true">{{name}}</div>
+                        <span class="delete-task">&times;</span>
+                    </li>
+                {{/each}}
+            </ol>
+        </div>
+        <div class="pure-u-1-2 task-list-wrapper  task-list-wrapper-br">
+            <div class="task-list-title">
+                不重要&不紧急
+            </div>
+ 	<form class="pure-form form-create-task">
+                <input class="hidden" type="text" name="type" value="br"/>
+                <input class="pure-input-1" name="name" type="text"/>
+                <button class="hidden" type="submit"></button>
+            </form>
+          <ol class="task-list">
+                {{#each taskListBR}}
+                    <li class="task-item" data-task-id="{{_id}}">
+                        <div class="task-name" contenteditable="true">{{name}}</div>
+                        <span class="delete-task">&times;</span>
+                    </li>
+                {{/each}}
+            </ol>
+        </div>
+    </div>
+</template>
